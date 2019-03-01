@@ -1,3 +1,5 @@
 import * as React from 'react'
 
-export const App = () => <div>hello world!</div>
+import { Board } from './Board/Board'
+
+export const App = () => <Board />
