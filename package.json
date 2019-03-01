@@ -1,0 +1,25 @@
+{
+  "name": "connect-four",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "reset-css": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "husky": "^1.3.1",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "typescript": "^3.3.3333"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
