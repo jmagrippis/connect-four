@@ -20,6 +20,9 @@
     "pretty-quick": "^1.10.0",
     "typescript": "^3.3.3333"
   },
+  "scripts": {
+    "test": "cypress open"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"

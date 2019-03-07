@@ -58,4 +58,16 @@ describe('Gameplay', () => {
       .should('have.css', 'background-color')
       .and('be.colored', 'yellow')
   })
+
+  it('marks a win for player 1 if they are 4 red pieces in a row vertically', () => {
+    cy.get('[data-column="1"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="1"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="1"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="1"]').click()
+
+    cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
+  })
 })
