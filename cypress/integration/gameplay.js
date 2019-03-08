@@ -70,4 +70,32 @@ describe('Gameplay', () => {
 
     cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
   })
+
+  it('marks a win for player 1 if they are 4 red pieces in a row horizontally', () => {
+    cy.get('[data-column="1"]').click()
+    cy.get('[data-column="1"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="3"]').click()
+    cy.get('[data-column="3"]').click()
+    cy.get('[data-column="4"]').click()
+
+    cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
+  })
+
+  it('marks a win for player 1 if they are 4 red pieces in a row diagonally', () => {
+    cy.get('[data-column="1"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="2"]').click()
+    cy.get('[data-column="3"]').click()
+    cy.get('[data-column="4"]').click()
+    cy.get('[data-column="3"]').click()
+    cy.get('[data-column="3"]').click()
+    cy.get('[data-column="4"]').click()
+    cy.get('[data-column="4"]').click()
+    cy.get('[data-column="5"]').click()
+    cy.get('[data-column="4"]').click()
+
+    cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
+  })
 })
