@@ -68,7 +68,7 @@ describe('Gameplay', () => {
     cy.get('[data-column="2"]').click()
     cy.get('[data-column="1"]').click()
 
-    cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
+    cy.get('[data-winner]').should('have.text', '🎉 RED wins 🎉')
   })
 
   it('marks a win for player 1 if they are 4 red pieces in a row horizontally', () => {
@@ -80,7 +80,7 @@ describe('Gameplay', () => {
     cy.get('[data-column="3"]').click()
     cy.get('[data-column="4"]').click()
 
-    cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
+    cy.get('[data-winner]').should('have.text', '🎉 RED wins 🎉')
   })
 
   it('marks a win for player 1 if they are 4 red pieces in a row diagonally', () => {
@@ -96,6 +96,6 @@ describe('Gameplay', () => {
     cy.get('[data-column="5"]').click()
     cy.get('[data-column="4"]').click()
 
-    cy.get('[data-winner]').should('have.text', '🎉 YELLOW wins 🎉')
+    cy.get('[data-winner]').should('have.text', '🎉 RED wins 🎉')
   })
 })

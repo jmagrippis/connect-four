@@ -21,7 +21,8 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "start": "parcel src/index.html"
   },
   "husky": {
     "hooks": {
